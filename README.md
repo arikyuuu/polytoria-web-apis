@@ -9,6 +9,7 @@ uncompleted list
 Probably undocumented APIs
 =================
 * [Chat APIs](#chat-apis)
+* [User APIs](#user-apis)
 
 Chat APIs
 ---------
@@ -34,3 +35,9 @@ Chat APIs
 #### Fetch new messages
 * https://polytoria.net/api/fetch/chat/newmessages?id=[chatID]
 > chatID: localStorage.getItem("chatID");
+
+User APIs
+---------
+#### Fetch user's inventory
+* https://polytoria.com/api/fetch/inventory?id=[userID]
+> userID: target user id
