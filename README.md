@@ -10,6 +10,9 @@ Probably undocumented APIs
 =================
 * [Chat APIs](#chat-apis)
 * [User APIs](#user-apis)
+* [Item APIs](#item-apis)
+* [Friendship APIs](#friendship-apis)
+* [Avatar APIs](#avatar-apis)
 * [Asset APIs](#asset-apis)
 * [Game APIs](#game-apis)
 * [Forum APIs](#forum-apis)
@@ -53,25 +56,17 @@ User APIs
 
 > p: page
 
-#### Friend button info
-* https://polytoria.net/api/users/friendbutton?id=[userid]
-> id: target user id
+#### Load user's wall
+* https://polytoria.net/api/fetch/user/wall?id=[id]&p=[page]
+> id: user id
 
+> p: page id
 
-#### 
-* https://polytoria.net/api/forum/reply
-> 
+#### Block a user
+* https://polytoria.net/api/users/block
+> csrf: your csrf token
 
-
-#### 
-* https://polytoria.net/api/forum/reply
-> 
-
-
-#### 
-* https://polytoria.net/api/forum/reply
-> 
-
+> id: user id
 
 #### Interact with a trade
 * https://polytoria.com/api/trade/action
@@ -87,18 +82,211 @@ User APIs
 
 > brick-input or stud-input: number of bricks or studs
 
+#### Log-off
+* https://polytoria.com/login/expire
+
+Item APIs
+---------
+
+#### Purchase an item
+* https://polytoria.net/api/catalog/purchase
+> csrf: your csrf token
+
+> id: item id
+
+#### Remove an item
+* https://polytoria.net/api/catalog/remove-inventory
+> csrf: your csrf token
+
+> id: item id 
+
+
+#### Fetch item comments
+* https://polytoria.net/api/fetch/catalog/comments?id=[id]&limit=[limit]&offset=[offset]
+> id: item id
+
+> limit: any number (default 4)
+
+> offset (optional): + 4 * commpage (commpage AKA COMMENT PAGE)
+
+#### Comment on an item
+* https://polytoria.net/api/catalog/comment
+> id: item id
+
+> content: message
+
+> g-recaptcha-response: captcha response key
+
+> csrf: your csrf
+
+
+#### Load resellers
+* https://polytoria.net/api/fetch/catalog/resellers?id=[id]&limit=[limit]&offset=[offset]
+> id: item id
+
+> limit: any number (default 4)
+
+> offset (optional): + 4 * respage
+
+#### Load owners
+* https://polytoria.net/api/fetch/catalog/owners?id=[id]&limit=[limit]&page=[page]
+> id: item id
+
+> limit: any number (default 4)
+
+> page: page
+
+#### Purchase an limited item
+* https://polytoria.net/api/catalog/purchasecollectible
+> id: limited item id
+
+> csrf: yo csrf token lol
+
+#### Offsale all
+* https://polytoria.net/api/catalog/offsale_all
+> id: item id
+
+> csrf: your csrf tokenn thingy
+
+#### Sell an limited item
+* https://polytoria.com/api/catalog/sellcollectible?serial=[itemserialid]&price=[price]&itemid=[itemid]&csrf=[csrf]
+> itemserialid: your item's serial id
+
+> price: chosen price
+
+> itemid: item id
+
+> csrf: your csrf tokenn thingy
+
+#### Purchase an limited item
+* https://polytoria.net/api/catalog/purchasecollectible
+> id: limited item id
+
+> csrf: yo csrf token lol
+
+Friendship APIs
+---------
+
+#### Fetch all friend requests
+* https://polytoria.net/api/fetch/requests?p=[page]
+
+#### Fetch all friends
+* https://polytoria.net/api/fetch/friends?p=[page]
+
+#### Friend button info
+* https://polytoria.net/api/users/friendbutton?id=[id]
+> id: user id
+
+#### Send a friend request
+* https://polytoria.net/api/users/addfriend
+> csrf: your csrf token
+
+> id: user id
+
+#### Remove a friend
+* https://polytoria.net/api/users/removefriend
+> csrf: your csrf token
+
+> id: user id
+
+Avatar APIs
+---------
+#### Load items
+* https://polytoria.com/api/fetch/wardrobe?type=[type]&limit=[limit]&page=[page]
+> type: face, pants, hat, shirt, tool
+
+> limit: default is 8
+
+> page: page
+
+#### Load wearing items
+* https://polytoria.com/api/fetch/wearing
+
+#### Set part color
+* https://polytoria.com/api/avatar/setcolor
+> part: body part (Torso, LeftLeg, LeftArm, RightLeg, RightArm, Head)
+
+> color: chosen color
+
+> csrf: your csrf token
+
+#### Wear
+* https://polytoria.com/api/avatar/wear
+> id: item id
+
+> csrf: your csrf token
+
+#### Unwear
+* https://polytoria.com/api/avatar/unwear
+> id: item id
+
+> csrf: your csrf token
+
+#### Render
+* https://polytoria.com/api/avatar/render
+> csrf: your csrf token
+
+> if you want to force redraw use this => forceRedraw: 1
+
+#### Load outfits
+* https://polytoria.com/api/fetch/outfits?limit=[limit]&page=[page]
+> limit: default is 8
+
+> page: page
+
+#### Wear an outfit
+* https://polytoria.com/api/avatar/loadoutfit
+> csrf: your csrf token
+
+> id: outfit id
+
+#### Save an outfit
+* https://polytoria.com/api/avatar/saveoutfit
+> csrf: your csrf token
+
+> name: outfit name
+
+#### Delete an outfit
+* https://polytoria.com/api/avatar/deleteoutfit
+> csrf: your csrf token
+
+> id: outfit id
+
 
 Asset APIs
 ---------
 #### Search
 * https://polytoria.com/api/fetch/search?q=[search_query]
 
+#### Validate username
+* https://polytoria.com/api/settings/validate_username?username=[username]
 
 Game APIs
 ---------
-#### 
-* https://polytoria.net
-> 
+#### Fetch all games
+* https://polytoria.net/api/fetch/games?page=[page]&type=[type]
+> page: a PAGE number bro (default is 0 on every &page= ig)
+
+> type: popular, updated
+
+#### Get a game launch token 
+* https://polytoria.net/api/games/request-server
+> csrf: your token
+
+> id: game id
+
+#### Get a callback status
+* https://polytoria.com/api/games/fetch-callback-status?h=
+> h: hash
+
+#### Launch a game (not an api but wahtever)
+> go to polytoria://launch_[GAME LAUNCH TOKEN]
+
+#### Activate/deactivate a game
+* https://polytoria.com/api/games/toggle-active
+> id: game id
+
+> csrf: yes u know what is this already
 
 Forum APIs
 ---------
@@ -107,11 +295,6 @@ Forum APIs
 > limit: 10
 
 > offset: page * limit
-
-#### 
-* https://polytoria.net/api/forum/reply
-> 
-
 
 #### Reply to a post
 * https://polytoria.net/api/forum/reply
@@ -167,3 +350,6 @@ Broken APIs
 ---------
 # Add reaction (forum post ig)
 * https://polytoria.com/api/addreaction.php?e=[emoji_id]&pid=[post_id]
+
+# Open Purchase Collectible Modal (not broken but y know it doesnt work when ur not on the site)
+* https://polytoria.com/api/fetch/catalog/limited?id=[itemid]
