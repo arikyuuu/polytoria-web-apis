@@ -22,26 +22,26 @@ Probably undocumented APIs
 Chat APIs
 ---------
 #### Fetch conversations
-* https://polytoria.net/api/fetch/chat/conversations
+* https://polytoria.com/api/fetch/chat/conversations
 
 #### Fetch chats
-* https://polytoria.net/api/fetch/chat/chats?id=[chatID]
+* https://polytoria.com/api/fetch/chat/chats?id=[chatID]
 > chatID: localStorage.getItem("chatID");
 
 #### Send a chat message
-* https://polytoria.net/api/chat/send
+* https://polytoria.com/api/chat/send
 > id: chatID
 
 > msg: message 2 send
 
 #### Start a new conversation
-* https://polytoria.net/api/chat/start_conversation
+* https://polytoria.com/api/chat/start_conversation
 > id: target user id
 
 > csrf: your csrf
 
 #### Fetch new messages
-* https://polytoria.net/api/fetch/chat/newmessages?id=[chatID]
+* https://polytoria.com/api/fetch/chat/newmessages?id=[chatID]
 > chatID: localStorage.getItem("chatID");
 
 User APIs
@@ -57,13 +57,13 @@ User APIs
 > p: page
 
 #### Load user's wall
-* https://polytoria.net/api/fetch/user/wall?id=[id]&p=[page]
+* https://polytoria.com/api/fetch/user/wall?id=[id]&p=[page]
 > id: user id
 
 > p: page id
 
 #### Block a user
-* https://polytoria.net/api/users/block
+* https://polytoria.com/api/users/block
 > csrf: your csrf token
 
 > id: user id
@@ -89,20 +89,20 @@ Item APIs
 ---------
 
 #### Purchase an item
-* https://polytoria.net/api/catalog/purchase
+* https://polytoria.com/api/catalog/purchase
 > csrf: your csrf token
 
 > id: item id
 
 #### Remove an item
-* https://polytoria.net/api/catalog/remove-inventory
+* https://polytoria.com/api/catalog/remove-inventory
 > csrf: your csrf token
 
 > id: item id 
 
 
 #### Fetch item comments
-* https://polytoria.net/api/fetch/catalog/comments?id=[id]&limit=[limit]&offset=[offset]
+* https://polytoria.com/api/fetch/catalog/comments?id=[id]&limit=[limit]&offset=[offset]
 > id: item id
 
 > limit: any number (default 4)
@@ -110,7 +110,7 @@ Item APIs
 > offset (optional): + 4 * commpage (commpage AKA COMMENT PAGE)
 
 #### Comment on an item
-* https://polytoria.net/api/catalog/comment
+* https://polytoria.com/api/catalog/comment
 > id: item id
 
 > content: message
@@ -121,7 +121,7 @@ Item APIs
 
 
 #### Load resellers
-* https://polytoria.net/api/fetch/catalog/resellers?id=[id]&limit=[limit]&offset=[offset]
+* https://polytoria.com/api/fetch/catalog/resellers?id=[id]&limit=[limit]&offset=[offset]
 > id: item id
 
 > limit: any number (default 4)
@@ -129,7 +129,7 @@ Item APIs
 > offset (optional): + 4 * respage
 
 #### Load owners
-* https://polytoria.net/api/fetch/catalog/owners?id=[id]&limit=[limit]&page=[page]
+* https://polytoria.com/api/fetch/catalog/owners?id=[id]&limit=[limit]&page=[page]
 > id: item id
 
 > limit: any number (default 4)
@@ -137,13 +137,13 @@ Item APIs
 > page: page
 
 #### Purchase an limited item
-* https://polytoria.net/api/catalog/purchasecollectible
+* https://polytoria.com/api/catalog/purchasecollectible
 > id: limited item id
 
 > csrf: yo csrf token lol
 
 #### Offsale all
-* https://polytoria.net/api/catalog/offsale_all
+* https://polytoria.com/api/catalog/offsale_all
 > id: item id
 
 > csrf: your csrf tokenn thingy
@@ -159,7 +159,7 @@ Item APIs
 > csrf: your csrf tokenn thingy
 
 #### Purchase an limited item
-* https://polytoria.net/api/catalog/purchasecollectible
+* https://polytoria.com/api/catalog/purchasecollectible
 > id: limited item id
 
 > csrf: yo csrf token lol
@@ -168,23 +168,23 @@ Friendship APIs
 ---------
 
 #### Fetch all friend requests
-* https://polytoria.net/api/fetch/requests?p=[page]
+* https://polytoria.com/api/fetch/requests?p=[page]
 
 #### Fetch all friends
-* https://polytoria.net/api/fetch/friends?p=[page]
+* https://polytoria.com/api/fetch/friends?p=[page]
 
 #### Friend button info
-* https://polytoria.net/api/users/friendbutton?id=[id]
+* https://polytoria.com/api/users/friendbutton?id=[id]
 > id: user id
 
 #### Send a friend request
-* https://polytoria.net/api/users/addfriend
+* https://polytoria.com/api/users/addfriend
 > csrf: your csrf token
 
 > id: user id
 
 #### Remove a friend
-* https://polytoria.net/api/users/removefriend
+* https://polytoria.com/api/users/removefriend
 > csrf: your csrf token
 
 > id: user id
@@ -264,13 +264,13 @@ Asset APIs
 Game APIs
 ---------
 #### Fetch all games
-* https://polytoria.net/api/fetch/games?page=[page]&type=[type]
+* https://polytoria.com/api/fetch/games?page=[page]&type=[type]
 > page: a PAGE number bro (default is 0 on every &page= ig)
 
 > type: popular, updated
 
 #### Get a game launch token 
-* https://polytoria.net/api/games/request-server
+* https://polytoria.com/api/games/request-server
 > csrf: your token
 
 > id: game id
@@ -291,13 +291,13 @@ Game APIs
 Forum APIs
 ---------
 #### Fetch posts
-* https://polytoria.net/api/fetch/forum/threads?id=1[subforum_id]&limit=[limit]&offset=[offset]
+* https://polytoria.com/api/fetch/forum/threads?id=1[subforum_id]&limit=[limit]&offset=[offset]
 > limit: 10
 
 > offset: page * limit
 
 #### Reply to a post
-* https://polytoria.net/api/forum/reply
+* https://polytoria.com/api/forum/reply
 > csrf: your csrf
 
 > content: message
@@ -309,15 +309,15 @@ Forum APIs
 Guild APIs
 ---------
 #### Join a guild
-* https://polytoria.net/api/guilds/join?id=[id]
+* https://polytoria.com/api/guilds/join?id=[id]
 > id: guild id
 
 #### Leave a guild
-* https://polytoria.net/api/guilds/leave?id=[id]
+* https://polytoria.com/api/guilds/leave?id=[id]
 > id: guild id
 
 #### Post on a guild wall
-* https://polytoria.net/api/guilds/post-wall
+* https://polytoria.com/api/guilds/post-wall
 > gid: group id
 
 > g-recaptcha-response: captcha response key
@@ -327,19 +327,19 @@ Guild APIs
 > csrf: your csrf
 
 #### Load a guild wall
-* https://polytoria.net/api/fetch/guilds/wall?id=[id]&p=[page]
+* https://polytoria.com/api/fetch/guilds/wall?id=[id]&p=[page]
 > id: guild id
 
 > p: page
 
 #### Load a guild store
-* https://polytoria.net/api/fetch/guilds/store?id=[id]&p=[page]
+* https://polytoria.com/api/fetch/guilds/store?id=[id]&p=[page]
 > id: guild id
 
 > p: page
 
 #### Load guild members
-* https://polytoria.net/api/fetch/guilds/members?gid=[id]&role=[role_value]&page=[page]
+* https://polytoria.com/api/fetch/guilds/members?gid=[id]&role=[role_value]&page=[page]
 > gid: id
 
 > role: chosen role id
