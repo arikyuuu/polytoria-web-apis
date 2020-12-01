@@ -348,8 +348,8 @@ Guild APIs
 
 Broken APIs
 ---------
-# Add reaction (forum post ig)
+#### Add reaction (forum post ig)
 * https://polytoria.com/api/addreaction.php?e=[emoji_id]&pid=[post_id]
 
-# Open Purchase Collectible Modal (not broken but y know it doesnt work when ur not on the site)
+#### Open Purchase Collectible Modal (not broken but y know it doesnt work when ur not on the site)
 * https://polytoria.com/api/fetch/catalog/limited?id=[itemid]
