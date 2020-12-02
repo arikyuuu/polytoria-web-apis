@@ -46,6 +46,10 @@ Chat APIs
 
 User APIs
 ---------
+#### Fetch user info
+* https://polytoria.com/api/fetch/user/clientinfo?username=[username]
+> username: ya lol
+
 #### Fetch user's inventory
 * https://polytoria.com/api/fetch/inventory?id=[userID]&type=[type]&limit=[limit]&p=[page]
 > userID: target user id
