@@ -92,6 +92,17 @@ User APIs
 Item APIs
 ---------
 
+#### Fetch catalog
+* https://polytoria.com/api/fetch/catalog/items?page=[page]&type=[type]&sort=[sortType]&q=[searchQuery]
+> page: page (optional)
+
+> type: hat, face, shirt, pants, tool
+
+> sortType: 0 (featured), 1 (best selling), 2 (recently updated), 3 (least expensive), 4 (most expensive)
+
+> searchQuery: search query (optional)
+
+
 #### Purchase an item
 * https://polytoria.com/api/catalog/purchase
 > csrf: your csrf token
