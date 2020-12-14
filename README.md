@@ -368,3 +368,6 @@ Broken APIs
 
 #### Open Purchase Collectible Modal (not broken but y know it doesnt work when ur not on the site)
 * https://polytoria.com/api/fetch/catalog/limited?id=[itemid]
+
+#### User ads (Returns blank)
+* https://polytoria.com/api/userads/fetch
