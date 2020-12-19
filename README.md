@@ -188,6 +188,9 @@ Friendship APIs
 #### Fetch all friends
 * https://polytoria.com/api/fetch/friends?p=[page]
 
+#### Fetch user's friends
+* https://polytoria.com/api/fetch/user/friends?id=[id]&p=[page]
+
 #### Friend button info
 * https://polytoria.com/api/users/friendbutton?id=[id]
 > id: user id
