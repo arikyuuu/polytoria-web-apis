@@ -173,11 +173,10 @@ Item APIs
 
 > csrf: your csrf tokenn thingy
 
-#### Purchase an limited item
-* https://polytoria.com/api/catalog/purchasecollectible
-> id: limited item id
-
-> csrf: yo csrf token lol
+#### Purchase a pack
+* https://polytoria.com/api/catalog/purchase-pack
+> id: pack item id
+> csrf: your csrf token
 
 Friendship APIs
 ---------
