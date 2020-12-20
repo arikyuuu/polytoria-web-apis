@@ -17,6 +17,7 @@ Probably undocumented APIs
 * [Game APIs](#game-apis)
 * [Forum APIs](#forum-apis)
 * [Guild APIs](#guild-apis)
+* [Ad APIs](#ad-apis)
 
 
 Chat APIs
@@ -80,13 +81,46 @@ User APIs
 
 > csrf: your csrf token
 
-#### Convert your currency
+#### Convert your currency (deprecated)
 * https://polytoria.com/api/currency/convert
 > csrf: your csrf token
 
 > brick-input or stud-input: number of bricks or studs
 
-#### Log-off
+#### "Calculate" recieved currency
+* https://polytoria.com/api/exchange/market-value?currency=[type]&amount=[amount]
+
+> type: bricks, studs
+
+> amount: an amount of bricks OR studs, lol?
+
+#### Place limit order
+* https://polytoria.com/api/exchange/place-limit-order
+> amount-give: how much u will give
+
+> amount-ask: how much u asked
+
+> currency: bricks or studs
+
+> split (optional): 1 = true, 0 = false
+
+> csrf: your csrf token
+
+#### Place market order
+* https://polytoria.com/api/exchange/place-market-order
+> amount: how much bricks or studs
+
+> currency: bricks or studs
+
+> csrf: your csrf token
+
+#### Cancel order
+* https://polytoria.com/api/exchange/cancel-order
+> id: order id
+
+> csrf: your csrf token
+
+#### Log-out
 * https://polytoria.com/login/expire
 
 Item APIs
@@ -363,6 +397,16 @@ Guild APIs
 
 > page: page
 
+Ad APIs
+---------
+#### Get a user-created ad
+* https://polytoria.com/api/userads/fetch
+
+#### Get a user-created ad redirect
+* https://polytoria.com/api/userads/adgateway?b=[adId]
+
+> adId: advertisement id
+
 Broken APIs
 ---------
 #### Add reaction (forum post ig)
@@ -370,3 +414,4 @@ Broken APIs
 
 #### Open Purchase Collectible Modal (not broken but y know it doesnt work when ur not on the site)
 * https://polytoria.com/api/fetch/catalog/limited?id=[itemid]
+
