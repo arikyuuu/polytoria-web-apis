@@ -212,6 +212,19 @@ Item APIs
 > id: pack item id
 > csrf: your csrf token
 
+#### View pack contents
+* https://polytoria.com/api/fetch/catalog/pack-contents?id=
+> id: pack item id
+
+#### Favourite an item
+* https://polytoria.com/api/catalog/favourite
+> id: item id
+> csrf: your csrf token
+
+#### Fetch total item favourites
+* https://polytoria.com/api/fetch/catalog/favourites?id=[id]
+> id: item id
+
 Friendship APIs
 ---------
 
