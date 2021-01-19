@@ -225,6 +225,10 @@ Item APIs
 * https://polytoria.com/api/fetch/catalog/favourites?id=[id]
 > id: item id
 
+#### Fetch chart data
+* https://polytoria.com/api/fetch/chart?id=[itemid]
+> id: limited item id - needs to be an limited item
+
 Friendship APIs
 ---------
 
