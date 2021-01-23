@@ -123,6 +123,10 @@ User APIs
 #### Log-out
 * https://polytoria.com/login/expire
 
+#### Verify Email
+* https://polytoria.com/api/auth/verify-email
+> csrf: your csrf token
+
 Item APIs
 ---------
 
