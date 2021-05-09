@@ -220,6 +220,12 @@ Item APIs
 * https://polytoria.com/api/fetch/catalog/pack-contents?id=
 > id: pack item id
 
+#### Open pack
+* https://polytoria.com/api/catalog/open-pack
+> id: pack id
+> csrf: csrf token
+
+
 #### Favourite an item
 * https://polytoria.com/api/catalog/favourite
 > id: item id
