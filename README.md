@@ -18,6 +18,7 @@ Probably undocumented APIs
 * [Forum APIs](#forum-apis)
 * [Guild APIs](#guild-apis)
 * [Ad APIs](#ad-apis)
+* [Other APIs](#other-apis)
 
 
 Chat APIs
@@ -52,6 +53,16 @@ User APIs
 > username: ya lol
 
 #### Fetch user's inventory
+* https://polytoria.com/api/fetch/favourites?id=[userID]&type=[type]&limit=[limit]&p=[page]
+> userID: target user id
+
+> type: hat, face, tool, shirt, pants
+
+> limit: any number (default 6)
+
+> p: page
+
+#### Fetch user's favourites
 * https://polytoria.com/api/fetch/inventory?id=[userID]&type=[type]&limit=[limit]&p=[page]
 > userID: target user id
 
@@ -358,7 +369,9 @@ Game APIs
 > h: hash
 
 #### Launch a game (not an api but wahtever)
-> go to polytoria://launch_[GAME LAUNCH TOKEN]
+> OLD CLIENTS: go to polytoria://launch_[GAME LAUNCH TOKEN]
+
+> NEW CLIENTS: polytoria://client/game_token_hash_idk
 
 #### Activate/deactivate a game
 * https://polytoria.com/api/games/toggle-active
@@ -424,6 +437,18 @@ Guild APIs
 
 > page: page
 
+#### Load your guilds (guilds you're in)
+* https://polytoria.com/api/fetch/guilds/myguilds?page=[page]
+> page: page number
+
+> limit: add &limit=limitnumber at the end of the url
+
+#### Load popular guilds
+* https://polytoria.com/api/fetch/guilds/popularguilds?page=[page]&q=[query]
+> page: page number
+
+> query: search query, (optional -> can be blank)
+
 Ad APIs
 ---------
 #### Get a user-created ad
@@ -433,6 +458,14 @@ Ad APIs
 * https://polytoria.com/api/userads/adgateway?b=[adId]
 
 > adId: advertisement id
+
+Other APIs
+---------
+#### Leaderboard
+* https://polytoria.com/api/fetch/leaderboard?c=[category]&p=[page]
+> Category: networth, posts, comments, views, sales
+
+> Page: page number
 
 Broken APIs
 ---------
