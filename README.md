@@ -397,6 +397,14 @@ Forum APIs
 
 > captcha: captcha response
 
+#### Give user reputation (not tested, use at ur own risk!!)
+* https://polytoria.com/api/forum/rep
+> id: post id
+
+> csrf: your csrf
+
+> neg: (default: 0) (not tested yet, possibly uses negative numbers and normal numbers e.g. -29 or 29 mixed with userid???)
+
 Guild APIs
 ---------
 #### Join a guild
