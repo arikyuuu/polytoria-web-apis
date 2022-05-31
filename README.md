@@ -1,6 +1,6 @@
 # polytoria-web-apis
 
-uncompleted list
+uncompleted list (updated 05/31/22 - will add more later)
 
 | Domain | Description |
 | -: | :- |
@@ -14,6 +14,7 @@ Probably undocumented APIs
 * [Friendship APIs](#friendship-apis)
 * [Avatar APIs](#avatar-apis)
 * [Asset APIs](#asset-apis)
+* [Library APIs](#library-apis)
 * [Game APIs](#game-apis)
 * [Forum APIs](#forum-apis)
 * [Guild APIs](#guild-apis)
@@ -21,7 +22,7 @@ Probably undocumented APIs
 * [Other APIs](#other-apis)
 
 
-Chat APIs
+Chat APIs (discarded)
 ---------
 #### Fetch conversations
 * https://polytoria.com/api/fetch/chat/conversations
@@ -92,11 +93,13 @@ User APIs
 
 > csrf: your csrf token
 
-#### Convert your currency (deprecated)
+#### Convert your currency (HAVEN'T TESTED YET, TRY AT YOUR OWN RISK)
 * https://polytoria.com/api/currency/convert
 > csrf: your csrf token
 
 > brick-input or stud-input: number of bricks or studs
+(stud-output,brick-output)
+
 
 #### "Calculate" recieved currency
 * https://polytoria.com/api/exchange/market-value?currency=[type]&amount=[amount]
@@ -225,6 +228,7 @@ Item APIs
 #### Purchase a pack
 * https://polytoria.com/api/catalog/purchase-pack
 > id: pack item id
+
 > csrf: your csrf token
 
 #### View pack contents
@@ -234,12 +238,14 @@ Item APIs
 #### Open pack
 * https://polytoria.com/api/catalog/open-pack
 > id: pack id
+
 > csrf: csrf token
 
 
 #### Favourite an item
 * https://polytoria.com/api/catalog/favourite
 > id: item id
+
 > csrf: your csrf token
 
 #### Fetch total item favourites
@@ -249,6 +255,25 @@ Item APIs
 #### Fetch chart data
 * https://polytoria.com/api/fetch/chart?id=[itemid]
 > id: limited item id - needs to be an limited item
+
+
+#### Place a buy request
+* https://polytoria.com/api/catalog/create-buy-request
+> id: item id
+
+> csrf: your csrf token
+
+> offer: bricks offer
+
+
+#### Cancel a buy request
+* https://polytoria.com/api/catalog/cancel-buy-request
+> id: item id
+
+> csrf: your csrf token
+
+
+
 
 Friendship APIs
 ---------
@@ -350,6 +375,33 @@ Asset APIs
 #### Validate username
 * https://polytoria.com/api/settings/validate_username?username=[username]
 
+
+Library APIs
+---------
+#### Get library items
+* https://api.polytoria.com/v1/models/toolbox?limit=[limit]&type=[type]&page=[page]&q=[search_query]
+> types: model, image, audio
+
+#### Serve decal
+* https://api.polytoria.com/v1/asset/serve-image?id=[id]
+
+#### View model content
+* https://api.polytoria.com/v1/models/get-model?id=[id]
+
+#### Calculate audio cost
+* https://polytoria.com/api/create/calculate-audio-cost
+> Use formdata objects!!! csrf and file
+
+#### Upload audio
+* https://polytoria.com/api/create/purchase-audio
+> Use formdata objects!!! csrf and file
+
+
+#### Upload decal
+* https://polytoria.com/api/create/create-decal
+> Use formdata objects!!! csrf and file
+
+
 Game APIs
 ---------
 #### Fetch all games
@@ -378,6 +430,12 @@ Game APIs
 > id: game id
 
 > csrf: yes u know what is this already
+
+#### Launch creator
+* https://polytoria.com/api/creator/launch
+> csrf: ur token
+
+> beta: false,true (beta testers)
 
 Forum APIs
 ---------
@@ -475,6 +533,11 @@ Other APIs
 
 > Page: page number
 
+
+#### Get notifications
+* https://polytoria.com/api/fetch/notifications
+
+
 Broken APIs
 ---------
 #### Add reaction (forum post ig)
@@ -482,4 +545,5 @@ Broken APIs
 
 #### Open Purchase Collectible Modal (not broken but y know it doesnt work when ur not on the site)
 * https://polytoria.com/api/fetch/catalog/limited?id=[itemid]
+
 
